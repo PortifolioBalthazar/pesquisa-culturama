@@ -43,8 +43,8 @@
                 <input type="radio" name="userGender" id="notInformed" value="Não Informado">
                 <label for="notInformed">Prefiro não informar</label>
                 <br>
-                <label for="maritalStatus">Estado Civil:</label>
-                <select name="maritalStatus" id="maritalStatus">
+                <label for="userMaritalStatus">Estado Civil:</label>
+                <select name="userMaritalStatus" id="userMaritalStatus">
                     <option value="notInformed" selected>Selecione...</option>
                     <option value="Casado">Casado</option>
                     <option value="Solteiro">Solteiro</option>
@@ -53,8 +53,8 @@
                     <option value="Outro">Outro</option>
                 </select>
                 <br>
-                <label for="state">Estado</label>
-                <select name="state" id="state" required>
+                <label for="userState">Estado</label>
+                <select name="userState" id="userState" required>
                     <option value="notInformed">Selecione...</option>
                     <option value="SP">São Paulo</option>
                     <option value="RJ">Rio de Janeiro</option>
@@ -68,8 +68,8 @@
                     <option value="CE">Ceará</option>
                 </select>
                 <br>
-                <label for="city">Cidade:</label>
-                <input type="text" name="city" id="city">
+                <label for="userCity">Cidade:</label>
+               <input type="text" id="userCity" name="userCity" autocomplete="address-level2" placeholder="Ex.: Fortaleza" />
             </fieldset>
             <br>
             <button type="submit">Enviar</button>

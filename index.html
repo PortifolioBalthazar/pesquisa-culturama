@@ -32,6 +32,45 @@
                 <label for="userPicture">Foto:</label>
                 <input type="file" name="userPicture" id="userPicture" accept="image/*">
             </fieldset>
+
+            <fieldset>
+                <legend>Perfil</legend>
+                <p>Selecione seu gênero:</p>
+                <input type="radio" name="userGender" id="female" value="Feminino">
+                <label for="female">Feminino</label>
+                <input type="radio" name="userGender" id="male" value="Masculino">
+                <label for="male">Masculino</label>
+                <input type="radio" name="userGender" id="notInformed" value="Não Informado">
+                <label for="notInformed">Prefiro não informar</label>
+                <br>
+                <label for="userMaritalStatus">Estado Civil:</label>
+                <select name="userMaritalStatus" id="userMaritalStatus">
+                    <option value="notInformed" selected>Selecione...</option>
+                    <option value="Casado">Casado</option>
+                    <option value="Solteiro">Solteiro</option>
+                    <option value="Divorciado">Divorciado</option>
+                    <option value="Viúvo">Viúvo</option>
+                    <option value="Outro">Outro</option>
+                </select>
+                <br>
+                <label for="userState">Estado</label>
+                <select name="userState" id="userState" required>
+                    <option value="notInformed">Selecione...</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="PR">Paraná</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="BA">Bahia</option>
+                    <option value="GO">Goiás</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="CE">Ceará</option>
+                </select>
+                <br>
+                <label for="userCity">Cidade:</label>
+               <input type="text" id="userCity" name="userCity" autocomplete="address-level2" placeholder="Ex.: Fortaleza" />
+            </fieldset>
             <br>
             <button type="submit">Enviar</button>
         </form>

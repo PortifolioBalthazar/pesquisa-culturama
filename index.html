@@ -86,6 +86,22 @@
                 <br>
                 <input type="checkbox" name="userSocialHabits" id="userSocialHabitsLinkedIn" value="linkedin">
                 <label for="userSocialHabitsLinkedIn">LinkedIn</label>
+                <br>
+                <label for="userMusicStyle">Estilo Musical:</label>
+                <input type="text" name="userMusicStyle" id="userMusicStyle" list="musicStyles">
+                <!-- Cria uma lista de sugestões para o campo de estilo musical -->
+                <datalist id="musicStyles">
+                    <option value="Pop"></option>
+                    <option value="Rock"></option>
+                    <option value="Sertanejo"></option>
+                    <option value="Funk"></option>
+                    <option value="Clássica"></option>
+                    <option value="Jazz"></option>
+                    <option value="Eletrônica"></option>
+                </datalist>
+                <br>
+                <label for="userFavoriteColor">Cor Favorita:</label>
+                <input type="color" name="userFavoriteColor" id="userFavoriteColor" value="#000000">
             </fieldset>
             <br>
             <button type="submit">Enviar</button>

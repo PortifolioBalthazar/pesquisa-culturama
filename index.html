@@ -14,135 +14,137 @@
     <title>Pesquisa Culturama</title>
 </head>
 <body>
-    <header>
-        <img src="assets/img/logo-culturama.png" alt="Logo Culturama">
-        <h1>Pesquisa Online</h1>
-    </header>
-    <section>
-        <form action="" method="GET">
-            <!-- Dados Pessoais -->
-             <fieldset>
-                <legend>Dados Pessoais</legend>
-                <label for="userName">Nome Completo:</label>
-                <input type="text" name="userName" id="userName" required>
-                <br>
-                <label for="userAge">Idade:</label>
-                <input type="number" name="userAge" id="userAge" min="12" max="100" required>
-                <br>
-                <label for="userBirthDate">Data de Nascimento:</label>
-                <input type="date" name="userBirthDate" id="userBirthDate">
-                <br>
-                <label for="userEmail">Email:</label>
-                <input type="email" name="userEmail" id="userEmail" required>
-                <br>
-                <label for="userPhoneNumber">Telefone:</label>
-                <input type="tel" name="userPhoneNumber" id="userPhoneNumber" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" placeholder="XX-XXXXX-XXXX" required>
-                <br>
-                <label for="userPicture">Foto:</label>
-                <input type="file" name="userPicture" id="userPicture" accept="image/*">
-            </fieldset>
-
-            <fieldset>
-                <legend>Perfil</legend>
-                <p>Selecione seu gênero:</p>
-                <input type="radio" name="userGender" id="female" value="Feminino">
-                <label for="female">Feminino</label>
-                <input type="radio" name="userGender" id="male" value="Masculino">
-                <label for="male">Masculino</label>
-                <input type="radio" name="userGender" id="notInformed" value="Não Informado">
-                <label for="notInformed">Prefiro não informar</label>
-                <br>
-                <label for="userMaritalStatus">Estado Civil:</label>
-                <select name="userMaritalStatus" id="userMaritalStatus">
-                    <option value="notInformed" selected>Selecione...</option>
-                    <option value="Casado">Casado</option>
-                    <option value="Solteiro">Solteiro</option>
-                    <option value="Divorciado">Divorciado</option>
-                    <option value="Viúvo">Viúvo</option>
-                    <option value="Outro">Outro</option>
-                </select>
-                <br>
-                <label for="userState">Estado</label>
-                <select name="userState" id="userState" required>
-                    <option value="notInformed">Selecione...</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="PR">Paraná</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="BA">Bahia</option>
-                    <option value="GO">Goiás</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="CE">Ceará</option>
-                </select>
-                <br>
-                <label for="userCity">Cidade:</label>
-               <input type="text" id="userCity" name="userCity" autocomplete="address-level2" placeholder="Ex.: Fortaleza" />
-            </fieldset>
-            
-            <fieldset>
-                <legend>Hábitos</legend>
-                <p>Redes Sociais:</p>
-                <input type="checkbox" name="userSocialHabits" id="userSocialHabitsInstagram" value="instagram">
-                <label for="userSocialHabitsInstagram">Instagram</label>
-                <br>
-                <input type="checkbox" name="userSocialHabits" id="userSocialHabitsFacebook" value="facebook">
-                <label for="userSocialHabitsFacebook">Facebook</label>
-                <br>
-                <input type="checkbox" name="userSocialHabits" id="userSocialHabitsWhatsApp" value="whatsapp">
-                <label for="userSocialHabitsWhatsApp">WhatsApp</label>
-                <br>
-                <input type="checkbox" name="userSocialHabits" id="userSocialHabitsLinkedIn" value="linkedin">
-                <label for="userSocialHabitsLinkedIn">LinkedIn</label>
-                <br>
-                <label for="userMusicStyle">Estilo Musical:</label>
-                <input type="text" name="userMusicStyle" id="userMusicStyle" list="musicStyles">
-                <!-- Cria uma lista de sugestões para o campo de estilo musical -->
-                <datalist id="musicStyles">
-                    <option value="Pop"></option>
-                    <option value="Rock"></option>
-                    <option value="Sertanejo"></option>
-                    <option value="Funk"></option>
-                    <option value="Clássica"></option>
-                    <option value="Jazz"></option>
-                    <option value="Eletrônica"></option>
-                </datalist>
-                <br>
-                <label for="userFavoriteColor">Cor Favorita:</label>
-                <input type="color" name="userFavoriteColor" id="userFavoriteColor" value="#000000">
-            </fieldset>
-
-            <fieldset>
-                <legend>Opinião</legend>
-                <label for="">O que achou do nosso serviço?</label>
-                <br>
-                <input type="radio" name="userSatisfaction" id="excellent" value="Excelente">
-                <label for="excellent">Excelente</label>
-                <input type="radio" name="userSatisfaction" id="good" value="Bom">
-                <label for="good">Bom</label>
-                <input type="radio" name="userSatisfaction" id="regular" value="Regular">
-                <label for="regular">Regular</label>
-                <input type="radio" name="userSatisfaction" id="poor" value="Ruim">
-                <label for="poor">Ruim</label>
-                <br>
-                <label for="userOpenComment">Escreva sua opinião:</label>
-                <br>
-                <textarea name="userOpenComment" id="userOpenComment" rows="4" cols="50" placeholder="Deixe seu comentário aqui..."></textarea>
-            </fieldset>
-
-            <fieldset>
-                <legend>Confirmações</legend>
-                <input type="checkbox" name="userTerms" id="userTerms" value="confirmed" required>
-                <label for="userTerms">Aceito os termos e condições.</label>
-                <br>
-                <input type="checkbox" name="userGetResult" id="userGetResult" value="confirmedGetResult">
-                <label for="userGetResult">Desejo receber os resultados da pesquisa.</label>
-            </fieldset>
-
-            <button type="submit">Enviar</button>
-            <button type="reset">Limpar</button>
-        </form>
-    </section>
+    <main>
+        <header>
+            <img src="assets/img/logo-culturama.png" alt="Logo Culturama">
+            <h1>Pesquisa Online</h1>
+        </header>
+        <section>
+            <form action="" method="GET">
+                <!-- Dados Pessoais -->
+                 <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="userName">Nome Completo:</label>
+                    <input type="text" name="userName" id="userName" required>
+                    <br>
+                    <label for="userAge">Idade:</label>
+                    <input type="number" name="userAge" id="userAge" min="12" max="100" required>
+                    <br>
+                    <label for="userBirthDate">Data de Nascimento:</label>
+                    <input type="date" name="userBirthDate" id="userBirthDate">
+                    <br>
+                    <label for="userEmail">Email:</label>
+                    <input type="email" name="userEmail" id="userEmail" required>
+                    <br>
+                    <label for="userPhoneNumber">Telefone:</label>
+                    <input type="tel" name="userPhoneNumber" id="userPhoneNumber" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" placeholder="XX-XXXXX-XXXX" required>
+                    <br>
+                    <label for="userPicture">Foto:</label>
+                    <input type="file" name="userPicture" id="userPicture" accept="image/*">
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Perfil</legend>
+                    <p>Selecione seu gênero:</p>
+                    <input type="radio" name="userGender" id="female" value="Feminino">
+                    <label for="female">Feminino</label>
+                    <input type="radio" name="userGender" id="male" value="Masculino">
+                    <label for="male">Masculino</label>
+                    <input type="radio" name="userGender" id="notInformed" value="Não Informado">
+                    <label for="notInformed">Prefiro não informar</label>
+                    <br>
+                    <label for="userMaritalStatus">Estado Civil:</label>
+                    <select name="userMaritalStatus" id="userMaritalStatus">
+                        <option value="notInformed" selected>Selecione...</option>
+                        <option value="Casado">Casado</option>
+                        <option value="Solteiro">Solteiro</option>
+                        <option value="Divorciado">Divorciado</option>
+                        <option value="Viúvo">Viúvo</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                    <br>
+                    <label for="userState">Estado</label>
+                    <select name="userState" id="userState" required>
+                        <option value="notInformed">Selecione...</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="PR">Paraná</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="BA">Bahia</option>
+                        <option value="GO">Goiás</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="CE">Ceará</option>
+                    </select>
+                    <br>
+                    <label for="userCity">Cidade:</label>
+                   <input type="text" id="userCity" name="userCity" autocomplete="address-level2" placeholder="Ex.: Fortaleza" />
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Hábitos</legend>
+                    <p>Redes Sociais:</p>
+                    <input type="checkbox" name="userSocialHabits" id="userSocialHabitsInstagram" value="instagram">
+                    <label for="userSocialHabitsInstagram">Instagram</label>
+                    <br>
+                    <input type="checkbox" name="userSocialHabits" id="userSocialHabitsFacebook" value="facebook">
+                    <label for="userSocialHabitsFacebook">Facebook</label>
+                    <br>
+                    <input type="checkbox" name="userSocialHabits" id="userSocialHabitsWhatsApp" value="whatsapp">
+                    <label for="userSocialHabitsWhatsApp">WhatsApp</label>
+                    <br>
+                    <input type="checkbox" name="userSocialHabits" id="userSocialHabitsLinkedIn" value="linkedin">
+                    <label for="userSocialHabitsLinkedIn">LinkedIn</label>
+                    <br>
+                    <label for="userMusicStyle">Estilo Musical:</label>
+                    <input type="text" name="userMusicStyle" id="userMusicStyle" list="musicStyles">
+                    <!-- Cria uma lista de sugestões para o campo de estilo musical -->
+                    <datalist id="musicStyles">
+                        <option value="Pop"></option>
+                        <option value="Rock"></option>
+                        <option value="Sertanejo"></option>
+                        <option value="Funk"></option>
+                        <option value="Clássica"></option>
+                        <option value="Jazz"></option>
+                        <option value="Eletrônica"></option>
+                    </datalist>
+                    <br>
+                    <label for="userFavoriteColor">Cor Favorita:</label>
+                    <input type="color" name="userFavoriteColor" id="userFavoriteColor" value="#000000">
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Opinião</legend>
+                    <label for="">O que achou do nosso serviço?</label>
+                    <br>
+                    <input type="radio" name="userSatisfaction" id="excellent" value="Excelente">
+                    <label for="excellent">Excelente</label>
+                    <input type="radio" name="userSatisfaction" id="good" value="Bom">
+                    <label for="good">Bom</label>
+                    <input type="radio" name="userSatisfaction" id="regular" value="Regular">
+                    <label for="regular">Regular</label>
+                    <input type="radio" name="userSatisfaction" id="poor" value="Ruim">
+                    <label for="poor">Ruim</label>
+                    <br>
+                    <label for="userOpenComment">Escreva sua opinião:</label>
+                    <br>
+                    <textarea name="userOpenComment" id="userOpenComment" rows="4" cols="50" placeholder="Deixe seu comentário aqui..."></textarea>
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Confirmações</legend>
+                    <input type="checkbox" name="userTerms" id="userTerms" value="confirmed" required>
+                    <label for="userTerms">Aceito os termos e condições.</label>
+                    <br>
+                    <input type="checkbox" name="userGetResult" id="userGetResult" value="confirmedGetResult">
+                    <label for="userGetResult">Desejo receber os resultados da pesquisa.</label>
+                </fieldset>
+    
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>

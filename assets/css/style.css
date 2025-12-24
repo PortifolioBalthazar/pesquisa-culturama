@@ -40,6 +40,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* ================================================================================================= */
 
 body {
   font-family: "Work Sans", sans-serif;
@@ -67,22 +68,127 @@ h1 {
     font-size: 2rem;
 }
 
-form {
+#form-section-1 form {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
 }
 
-fieldset {
+#form-section-1 fieldset {
     padding: 15px;
     border: 1px solid #cccccc;
     margin-bottom: 15px;
     border-radius: 5px;
 }
 
-legend {
+#form-section-1 legend {
     font-weight: bold;
     font-size: 18px;
     padding: 0 10px;
+}
+
+#form-section-1 input, #form-section-1 select, #form-section-1 textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+
+}
+
+#form-section-1 label {
+    /* O label é um elemento de texto e precisamos resetar seu comportamento padrão para que possamos aplicar margens corretamente */
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+#form-section-1 p {
+    margin-bottom: 15px;
+}
+
+/* Solução 1: Definir largura máxima para inputs */
+#form-section-1 input[type="text"],
+#form-section-1 input[type="number"],
+#form-section-1 input[type="date"],
+#form-section-1 input[type="email"],
+#form-section-1 input[type="tel"],
+#form-section-1 input[type="file"],
+#form-section-1 select,
+#form-section-1 textarea {
+    width: 100%;
+    /* Como Funciona (Os Dois Valores Principais)
+    **content-box (Padrão)**
+        A largura e altura que você define (ex: width: 100px;) aplicam-se apenas ao conteúdo do elemento.
+        O padding e a borda são adicionados fora dessa largura e altura, aumentando o tamanho total da caixa.
+        Exemplo: Um div com width: 100px;, padding: 10px;, border: 1px solid black; terá 122px de largura total (100px de conteúdo + 10px de padding + 1px de borda em cada lado).
+    **border-box**
+        A largura e altura que você define incluem o padding e a borda dentro do tamanho total especificado.
+        É muito mais fácil de prever e manipular, pois o tamanho final é sempre o que você declarou.
+        Exemplo: Um div com width: 100px;, padding: 10px;, border: 1px solid black; terá exatamente 100px de largura total, com padding e borda ajustados para caber dentro. */
+    box-sizing: border-box;
+}
+
+/* Solução 2: Para inputs específicos (radio, checkbox) */
+#form-section-1 input[type="radio"],
+#form-section-1 input[type="checkbox"] {
+    width: auto; /* Mantém tamanho natural */
+}
+
+#form-section-1 textarea {
+    /* Definição de altura mínima para textarea */
+    min-height: 200px;
+}
+
+#form-section-1 input[type="color"] {
+    width: 50px;
+    /* resetando o padding que foi definido na linha 90 */
+    padding: 0;
+}
+
+/* Validações */
+#form-section-1 input:invalid, #form-section-1 select:invalid, #form-section-1 textarea:invalid {
+    border-color: red;
+}
+
+#form-section-1 input:valid, #form-section-1 select:valid, #form-section-1 textarea:valid {
+    border-color: green;
+}
+
+#form-section-1 .buttons-form {
+    text-align: end;
+}
+
+#form-section-1 .buttons-form button {
+    background-color: #4CAF50;
+    color: white;
+    /* padding 10px no (topo/bottom) e 20px nas laterais */
+    padding: 10px 20px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#form-section-1 .buttons-form button:hover {
+    background-color: #ffffff;
+    color: green;
+}
+
+/* View de Sucesso de Envio */
+
+#success-body {
+    background-color: #f9f9f9ff;
+}
+
+#success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#success-message i {
+    font-size: 4rem;
+    color: green;
 }

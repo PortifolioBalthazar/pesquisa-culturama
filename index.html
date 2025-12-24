@@ -17,13 +17,14 @@
     <main>
         <header>
             <img src="assets/img/logo-culturama.png" alt="Logo Culturama">
-            <h1>Pesquisa Online</h1>
+            <h1>Pesquisa de Opinião</h1>
         </header>
-        <section>
-            <form action="" method="GET">
+        <section id="form-section-1">
+            <form action="sucesso.html" method="GET">
                 <!-- Dados Pessoais -->
                  <fieldset>
                     <legend>Dados Pessoais</legend>
+                    
                     <label for="userName">Nome Completo:</label>
                     <input type="text" name="userName" id="userName" required>
                     <br>
@@ -140,10 +141,12 @@
                     <input type="checkbox" name="userGetResult" id="userGetResult" value="confirmedGetResult">
                     <label for="userGetResult">Desejo receber os resultados da pesquisa.</label>
                 </fieldset>
-    
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button>
-            </form>
+                
+                <div class="buttons-form">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </form>
+                </div>
         </section>
     </main>
 </body>

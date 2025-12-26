@@ -103,6 +103,15 @@ h1 {
     margin-bottom: 8px;
 }
 
+#userPhoneNumber, #userPicture {
+    margin-bottom: 0px!important;
+}
+
+small {
+    display:inline-block;
+    margin-bottom: 20px;
+}
+
 #form-section-1 p {
     margin-bottom: 15px;
 }
